@@ -7,8 +7,6 @@ BubbleSort
 - No pior caso, são feitas n^2 operações. 
 - A complexidade desse algoritmo é de ordem quadrática. Por isso, ele não é recomendado para programas que precisem de velocidade e operem com quantidade elevada de dados. 
 
-No caso médio: O(n^2)
-
 SelectionSort
 --------------
 - Por não usar um vetor auxiliar para realizar a ordenação, ele ocupa menos memória. 
