@@ -3,24 +3,28 @@ Algoritmos de Ordenação
 
 BubbleSort
 -----------
-Este algoritmo percorre a lista de itens ordenáveis do início ao fim, verificando a ordem dos elementos dois a dois, e trocando-os de lugar se necessário. Percorre-se a lista até que nenhum elemento tenha sido trocado de lugar na passagem anterior. 
+- No melhor caso, o algoritmo executa n operações relevantes, onde n representa o número de elementos do vector. 
+- No pior caso, são feitas n^2 operações. 
+- A complexidade desse algoritmo é de ordem quadrática. Por isso, ele não é recomendado para programas que precisem de velocidade e operem com quantidade elevada de dados. 
 
-No caso médio: O(N2)
+No caso médio: O(n^2)
 
 SelectionSort
 --------------
-O selection sort compara a cada interação um elemento com os outros, visando encontrar o menor. Dessa forma, podemos entender que não existe um melhor caso mesmo que o vetor esteja ordenado ou em ordem inversa serão executados os dois laços do algoritmo, o externo e o interno. 
-
-A complexidade deste algoritmo será sempre O(N2).
+- Por não usar um vetor auxiliar para realizar a ordenação, ele ocupa menos memória. 
+- Ele é uns dos mais velozes na ordenação de vetores de tamanhos pequenos.
+- Ele faz sempre (n^2 − n)/2 comparações, independentemente do vetor estar ordenado ou não.
 
 InsertionSort
 --------------
-Algoritmo de ordenação que, dado uma estrutura (array, lista) constrói uma matriz final com um elemento de cada vez, uma inserção por vez. Assim como algoritmos de ordenação quadrática, é bastante eficiente para problemas com pequenas entradas, sendo o mais eficiente entre os algoritmos desta ordem de classificação.
-
-O(N2) sendo ótimo quando a lista está quase ordenada.
+- É o método a ser utilizado quando o arquivo está "quase" ordenado
+- É um bom método quando se desejar adicionar poucos elementos em um arquivo já ordenado, pois seu custo é linear.
+- O algoritmo de ordenação por inserção é estável.
+- O(n^2) sendo ótimo quando a lista está quase ordenada.
+- Alto custo de movimentação de elementos no vetor.
 
 QuickSort
 ----------
-A estratégia consiste em rearranjar as chaves de modo que as chaves "menores" precedam as chaves "maiores". Em seguida o quicksort ordena as duas sublistas de chaves menores e maiores recursivamente até que a lista completa se encontre ordenada.
-
-Complexidade de espaço: O(log2N), O(log2N) no melhor caso e no caso médio e O(N) no pior caso
+- O pior caso de particionamento ocorre quando o elemento pivô divide a lista de forma desbalanceada (quando a lista já está ordenada, ou inversamente ordenada).
+- O melhor caso de particionamento acontece quando ele produz duas listas de tamanho não maior que n/2.
+- Complexidade de espaço: O(log2n) no melhor caso e no caso médio e O(n) no pior caso
