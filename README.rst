@@ -28,3 +28,11 @@ Complexidade: O(nlogn)
 
 - O pior caso de particionamento ocorre quando o elemento pivô divide a lista de forma desbalanceada (quando a lista já está ordenada, ou inversamente ordenada).
 - O melhor caso de particionamento acontece quando ele produz duas listas de tamanho não maior que n/2.
+
+MergeSort
+----------
+Complexidade: O(nlogn)
+
+- Eficiente para listas maiores 
+- Maior consumo de memória
+- sempre O(nlogn)
