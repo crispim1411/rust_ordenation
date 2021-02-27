@@ -2,18 +2,20 @@
 pub trait Sorter {
     fn sort<T>(&self, slice: &mut [T]) 
     where 
-        T: Ord;
+        T: Ord + Copy;
 }
 
 mod bubblesort;
 mod insertionsort;
 mod selectionsort;
 mod quicksort;
+mod mergesort;
 
 pub use bubblesort::BubbleSort;
 pub use insertionsort::InsertionSort;
 pub use selectionsort::SelectionSort;
 pub use quicksort::QuickSort;
+pub use mergesort::MergeSort;
 
 #[cfg(test)]
 mod tests {

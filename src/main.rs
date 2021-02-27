@@ -16,14 +16,18 @@ fn main() {
     test_sorter(SelectionSort);
     println!("Algorithm: {}", "QuickSort");
     test_sorter(QuickSort);
+    println!("Algorithm: {}", "MergeSort");
+    test_sorter(MergeSort);
 }
 
 fn test_sorter<S: Sorter>(algorithm: S) {
-    let mut things: Vec<u32> = (0..N).collect();
+    let range: Vec<u32> = (0..N).collect();
+
+    let mut things = range.clone();
     things.shuffle(&mut thread_rng());
 
     algorithm.sort(&mut things);
-    match things == (0..N).collect::<Vec<u32>>() {
+    match things == range {
         true => println!("Ok"),
         false => {
             println!("Error");
